@@ -4,6 +4,7 @@ Vue.config.devtools = true;
 
 const app = new Vue({
     el: '#root',
+
     data: {
         currentIndex: 0,
         images:
@@ -12,23 +13,40 @@ const app = new Vue({
                     imageLink: 'https://picsum.photos/id/237/200/300'
                 },
                 {
-                    imageLink: 'https://picsum.photos/id/237/200/300'
+                    imageLink: 'https://picsum.photos/id/1005/367/267'
                 },
                 {
-                    imageLink: 'https://picsum.photos/id/237/200/300'
+                    imageLink: 'https://picsum.photos/id/1001/367/267'
                 },
                 {
-                    imageLink: 'https://picsum.photos/id/237/200/300'
+                    imageLink: 'https://cdn-images-1.medium.com/max/500/1*OBasuVv5oympWw_ImWkWuQ.png'
                 }
             ]
     },
 
     methods: {
         isIndex(index) {
-            if (this.currentIndex === index) {
-                return true;
+            return this.currentIndex === index;
+        },
+
+        nextPic() {
+            if (this.currentIndex === this.images.length - 1) {
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
             }
-            return false;
+        },
+
+        prevPic() {
+            if (this.currentIndex === 0) {
+                this.currentIndex = this.images.length - 1;
+            } else {
+                this.currentIndex--;
+            }
+        },
+
+        setPic(index) {
+            this.currentIndex = index;
         }
     }
 });
