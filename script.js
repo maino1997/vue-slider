@@ -7,6 +7,8 @@ const app = new Vue({
 
     data: {
         currentIndex: 0,
+        onEnter: undefined,
+        isStarted: true,
         images:
             [
                 {
@@ -47,6 +49,20 @@ const app = new Vue({
 
         setPic(index) {
             this.currentIndex = index;
-        }
+        },
+
+        startAutoPlay() {
+            this.onEnter = setInterval(this.nextPic, 3000);
+            console.log(this.onEnter);
+        },
+
+        stopAutoPlay() {
+            console.log(this.onEnter);
+            clearInterval(this.onEnter);
+        },
+    },
+
+    created() {
+        this.startAutoPlay();
     }
 });
