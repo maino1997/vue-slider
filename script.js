@@ -6,8 +6,12 @@ const app = new Vue({
     el: '#root',
 
     data: {
+
+        // Mi devo creare questa variabile d'appoggio per poi confrontarla con l'indice della singola immagine 
+        // quando passo tutti gli elementi dell'array e ritornare true se sono uguali e quindi mettere come 
+        // src il link della immagine stessa 
         currentIndex: 0,
-        autopla: undefined,
+        autoplay: undefined,
         isStarted: true,
         images:
             [
