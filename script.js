@@ -12,7 +12,6 @@ const app = new Vue({
         // src il link della immagine stessa 
         currentIndex: 0,
         autoplay: undefined,
-        isStarted: true,
         images:
             [
                 {
