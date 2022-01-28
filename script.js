@@ -55,7 +55,7 @@ const app = new Vue({
         },
 
         startAutoPlay() {
-            this.autoplay = setInterval(this.nextPic, 3000);
+            setInterval(this.nextPic, 3000);
             console.log(this.autoplay);
         },
 
