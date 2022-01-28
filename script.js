@@ -14,18 +14,18 @@ const app = new Vue({
         autoplay: undefined,
         images:
             [
-                {
-                    imageLink: 'https://picsum.photos/id/237/200/300'
-                },
-                {
-                    imageLink: 'https://picsum.photos/id/1005/367/267'
-                },
-                {
-                    imageLink: 'https://picsum.photos/id/1001/367/267'
-                },
-                {
-                    imageLink: 'https://cdn-images-1.medium.com/max/500/1*OBasuVv5oympWw_ImWkWuQ.png'
-                }
+
+                'https://picsum.photos/id/237/200/300',
+
+
+                'https://picsum.photos/id/1005/367/267',
+
+
+                'https://picsum.photos/id/1001/367/267',
+
+
+                'https://cdn-images-1.medium.com/max/500/1*OBasuVv5oympWw_ImWkWuQ.png'
+
             ]
     },
 
